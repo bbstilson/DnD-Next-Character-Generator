@@ -284,7 +284,7 @@ button:hover {
 	line-height: 1.25;
 }
 #footer-container p:last-child:not(.notes p) {
-	background-color: pink;
+	max-width: 80%;
 }
 
 .step {
