@@ -1,14 +1,14 @@
 @font-face {
     font-family: "MW Regular";
-    src: url('../Fonts/Merriweather-Regular.ttf');
+    src: url('../fonts/Merriweather-Regular.ttf');
 }
 @font-face {
     font-family: "MW Light";
-    src: url('../Fonts/Merriweather-Light.ttf');
+    src: url('../fonts/Merriweather-Light.ttf');
 }
 @font-face {
     font-family: "SSP Semibold";
-    src: url('../Fonts/SourceSansPro-Semibold.ttf');
+    src: url('../fonts/SourceSansPro-Semibold.ttf');
 }
 
 html,
