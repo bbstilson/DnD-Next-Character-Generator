@@ -1,0 +1,125 @@
+<!doctype html> 
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<title>Next Character Generator</title>
+	</head>
+	<body>
+		<main id='content-container'>
+			<header>
+				<div class="name">
+					<p><a href="http://brandonstilson.com">Brandon Stilson</a></p>
+					<p><a href="https://github.com/bbstilson/next-character-generator">View on Github</a></p>
+				</div>
+				<div class="top">
+					<p>NEXT CHARACTER GENERATOR</p>
+				</div>
+			</header>
+			
+			<section class="container flex">
+				<section class="left">
+					<div class="h1tags">
+						<h1 class="race"></h1>
+						<h1 class="class"></h1>
+					</div>
+					<p class="aboutMe">As a <span class="class"></span>, your most important ability is <span id="importantAbilities"></span>, and as a <span class="race"></span> you get a bonus to <span id="bonuses"></span>.</p>
+					<div class="flex fix">
+						<table>
+							<tbody>
+								<tr>
+									<td id="0">PL</td>
+									<td id="6">PL</td>
+									<td id="12">PL</td>
+									<td id="3">PL</td>
+									<td id="9">PL</td>
+									<td id="15">PL</td>
+								</tr>
+								<tr>
+									<td id="1">PL</td>
+									<td id="7">PL</td>
+									<td id="13">PL</td>
+									<td id="4">PL</td>
+									<td id="10">PL</td>
+									<td id="16">PL+</td>
+								</tr>
+								<tr>
+									<td id="2">PL</td>
+									<td id="8">PL</td>
+									<td id="14">PL</td>
+									<td id="5">PL</td>
+									<td id="11">PL</td>
+									<td id="17">PL</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="wildcard">
+							<h3>Wildcard:</h3>
+							<p><span id="wildcard"></span></p>
+						</div>
+					</div>
+					<div class="button-container">
+						<button id="button">REROLL</button>
+					</div>
+				</section>
+				<section class="right">
+					<div class="flex rightfix">
+						<div>
+							<h2 id="aboutRaceTitle"></h2>
+							<div class="line"></div>
+							<p id="bioRace"></p>
+						</div>
+						<div>
+							<h2 id="aboutClassTitle"></h2>
+							<div class="line"></div>
+							<p id="bioClass"></p>
+						</div>
+					</div>
+				</section>
+			</section>
+			<footer id='footer-container' class="footer-hidden">
+				<p>How does this work?</p>
+				<hr>
+				<p class="step">1. Choose a Random Race</p>
+				<p>Every character belongs to a race, one of the many intelligent humanoid species in the D&amp;D world. The most common player character races are Dwarves, Elves, Halflings, and Humans (however, this generator uses all possible races). Some races also have subraces, such as Mountain-Dwarf or Wood-Elf.<span class="superscript">1</span></p>
+				<p class="step">2. Choose a Random Class</p>
+				<p>Every adventurer is a member of a class. Class broadly describes a character’s vocation, what special talents he or she possesses, and the tactics he or she is most likely to employ when exploring a dungeon, fighting monsters, or engaging in a tense negotiation.<span class="superscript">2</span></p>
+				<p class="step">3. Roll Random Ability Scores</p>
+				<p>There are six abilities - Strength, Dexterity, Constitution, Intelligence, Wisdom, and Charisma - and your character receives a score for each, which determines his or her ability to perform various actions.</p>
+				<p>Your character's six ability scores are generated randomly. Four 6-sided "dice" are rolled and the total of the highest three numbers are recorded. This is done five more times creating 6 random scores, one for each ability.</p>
+				<p>The random scores are ordered highest to lowest, and, because the importance of abilities depends on which class was generated, the abilities are sorted by most important, then randomized non-essential abilties, then least important ability. For example, if you roll a Barbarian, your most important ability is Strength; Dexterity, Constituation and Charisma are non-essential; and Wisdom is the least important.</p>
+				<p class="step">4. Add Racial Modifiers to Ability Scores</p>
+				<p>Each race receives bonuses to certain abilities. After the abilities and scores have been sorted, your scores are modified based on which bonuses your race receives.</p>
+				<p class="step">5. Calculate Modifiers</p>
+				<p>Once everything has been calculated, ability modifiers are determined by subtracting 10 from each score and then dividing the result by 2 (rounding down).</p>
+				<hr>
+				<div class="more-details">
+					<p>Want to see more details on each roll? Open up the console and enter <span class="code">showDetails = true</span>. Then, reroll!</p>
+				</div>
+				<hr>
+				<div class="notes">
+					<p class="notes-header">Notes:</p>
+					<p class="note">1. Page 11 - DnD 5e Player Handbook</p>
+					<p class="note">2. Ibid.</p>
+				</div>
+			</footer>
+			<script>
+				var footer = document.getElementById('footer-container')
+				var footerLink = footer.children[0];
+				footerLink.addEventListener('click', function() {
+					if (footer.className === 'footer-hidden') {
+						footer.className = 'footer-active';
+					} else {
+						footer.className = 'footer-hidden';
+					}
+				});
+			</script>
+		</main>
+		<footer>
+			<script type="text/javascript" src="js/data.js"></script>
+			<script type="text/javascript" src="js/dnd.js"></script>
+		</footer>
+	</body>
+</html>
